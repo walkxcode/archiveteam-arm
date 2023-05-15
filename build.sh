@@ -21,7 +21,7 @@ done
 
 PLATFORM=${PLATFORM:-linux/arm64,linux/arm/v7}
 PATCH=${PATCH:-}
-FROM_REPLACE=${FROM_REPLACE:-imrehg/archiveteam-arm-}
+FROM_REPLACE=${FROM_REPLACE:-walkx/archiveteam-arm-}
 
 build_dir="./build"
 if [ -d "${build_dir}" ]; then
