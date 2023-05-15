@@ -10,7 +10,7 @@ Project = namedtuple(
 project_list = {
     "wget": Project(
         git_repo="https://github.com/ArchiveTeam/wget-lua",
-        docker_repo="imrehg/archiveteam-arm-wget-lua",
+        docker_repo="walkx/archiveteam-arm-wget-lua",
         tag="v1.21.3-at-gnutls",
         patch=None,
         depends_on=None,
@@ -18,7 +18,7 @@ project_list = {
     ),
     "grab-base": Project(
         git_repo="https://github.com/ArchiveTeam/grab-base-df",
-        docker_repo="imrehg/archiveteam-arm-grab-base",
+        docker_repo="walkx/archiveteam-arm-grab-base",
         tag="gnutls",
         patch="grab-base.patch",
         depends_on="wget",
@@ -26,7 +26,7 @@ project_list = {
     ),
     "reddit": Project(
         git_repo="https://github.com/ArchiveTeam/reddit-grab",
-        docker_repo="imrehg/archiveteam-arm-reddit-grab",
+        docker_repo="walkx/archiveteam-arm-reddit-grab",
         tag="latest",
         patch=None,
         depends_on="grab-base",
@@ -34,7 +34,7 @@ project_list = {
     ),
     "telegram": Project(
         git_repo="https://github.com/ArchiveTeam/telegram-grab",
-        docker_repo="imrehg/archiveteam-arm-telegram-grab",
+        docker_repo="walkx/archiveteam-arm-telegram-grab",
         tag="latest",
         patch=None,
         depends_on="grab-base",
@@ -42,9 +42,17 @@ project_list = {
     ),
     "ua": Project(
         git_repo="https://github.com/ArchiveTeam/ua-grab",
-        docker_repo="imrehg/archiveteam-arm-ua-grab",
+        docker_repo="walkx/archiveteam-arm-ua-grab",
         tag="latest",
         patch="ua-grab.patch",
+        depends_on="grab-base",
+        build_args=[],
+    ),
+    "imgur": Project(
+        git_repo="https://github.com/ArchiveTeam/imgur-grab",
+        docker_repo="walkx/archiveteam-arm-imgur-grab",
+        tag="latest",
+        patch=None,
         depends_on="grab-base",
         build_args=[],
     ),
