@@ -56,6 +56,14 @@ project_list = {
         depends_on="grab-base",
         build_args=[],
     ),
+    "urls": Project(
+        git_repo="https://github.com/ArchiveTeam/urls-grab",
+        docker_repo="walkx/archiveteam-arm-urls-grab",
+        tag="latest",
+        patch=None,
+        depends_on="grab-base",
+        build_args=[],
+    ),
 }
 
 BuildResult = namedtuple("BuildResult", ("rebuilt"))
