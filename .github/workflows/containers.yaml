@@ -10,7 +10,7 @@ on:
       # Do not trigger on workflow changes, can do manual trigger if needed
       - '.github/**'
   schedule:
-    - cron:  '0 0 */3 * *'
+    - cron:  '0 */3 * * *'
   workflow_dispatch:
     inputs:
       invoke_args:
